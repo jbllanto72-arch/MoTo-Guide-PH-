@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+}
+
+/* NAVIGATION */
+header {
+    background: #080808;
+    padding: 20px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span, footer span {
+    color: #ed2929;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.navbar a:hover {
+    color: #ed2929;
+}
+
+/* HOME */
+.hero {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    background:
+        linear-gradient(90deg, #090909 20%, rgba(0,0,0,.5)),
+        url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=1600");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.tagline, .small-title {
+    color: #ed2929;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #ed2929;
+}
+
+.hero-content p {
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ed2929;
+    color: white;
+    padding: 14px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background: #b81717;
+}
+
+/* GENERAL SECTIONS */
+.section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+/* MOTORCYCLE CARDS */
+.models {
+    background: #151515;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    padding-bottom: 20px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card h3, .card p, .card span {
+    margin: 15px 18px;
+}
+
+.card p {
+    color: #bbb;
+    line-height: 1.6;
+}
+
+.card span {
+    display: inline-block;
+    color: #ed2929;
+    font-weight: bold;
+}
+
+/* MAINTENANCE */
+.tips-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.tip {
+    background: #222;
+    padding: 30px;
+    border-left: 4px solid #ed2929;
+    text-align: left;
+}
+
+.tip h3 {
+    margin-bottom: 12px;
+}
+
+.tip p {
+    color: #bbb;
+    line-height: 1.6;
+}
+
+/* SAFETY */
+.safety {
+    background: #1a1a1a;
+}
+
+.safety-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.safety-content div {
+    background: #252525;
+    padding: 25px;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.safety-content h3 {
+    color: #ed2929;
+    margin-bottom: 12px;
+}
+
+.safety-content p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* ABOUT */
+.about p:last-child {
+    max-width: 750px;
+    margin: auto;
+    color: #ccc;
+    line-height: 1.9;
+}
+
+/* FOOTER */
+footer {
+    background: #080808;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+footer p {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+.copyright {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 50px 7%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .tips-container,
+    .safety-content {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 60px 6%;
+    }
+
+    .section h2 {
+        font-size: 24px;
+    }
+}
